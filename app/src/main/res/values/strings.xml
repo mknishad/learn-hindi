@@ -1,0 +1,25 @@
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">হিন্দী শিখুন</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_phrases">বাক্য</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_colors">রং</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_numbers">নাম্বার</string>
+
+    <!-- Category name for the vocabulary words for animals [CHAR LIMIT=20] -->
+    <string name="category_animals">প্রাণী</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_family">পরিবার</string>
+
+    <!--Add unit id-->
+    <string name="bottom_ad_unit">ca-app-pub-3318512953586134/6284349403</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
