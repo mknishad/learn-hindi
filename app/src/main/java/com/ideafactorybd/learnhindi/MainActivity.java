@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        // Initilize mobile adds
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3318512953586134~6420290206");
 
         // Load the ad view
         mAdView = (AdView) findViewById(R.id.adView);
