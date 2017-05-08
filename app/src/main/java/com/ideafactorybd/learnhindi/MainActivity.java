@@ -47,25 +47,25 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onPause() {
+        super.onPause();
         if (mAdView != null) {
             mAdView.pause();
         }
-        super.onPause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         if (mAdView != null) {
-            mAdView.pause();
+            mAdView.resume();
         }
     }
 
     @Override
     protected void onDestroy() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
         super.onDestroy();
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
     }
 }
