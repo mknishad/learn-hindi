@@ -4,6 +4,7 @@ package com.ideafactorybd.learnhindi;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 
 /**
@@ -120,6 +120,11 @@ public class PhrasesFragment extends Fragment {
                 }
             }
         });
+
+        // Enable scrolling in the list view
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            listView.setNestedScrollingEnabled(true);
+        }
 
         return rootView;
     }
