@@ -4,17 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary_color</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
-        <!--<item name="actionBarStyle">@style/MiwokAppBarStyle</item>
-        <item name="android:windowContentOverlay">@null</item>-->
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>
-
-    <!-- App bar style -->
-    <style name="MiwokAppBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <!-- Remove the shadow below the app bar -->
-        <item name="elevation">0dp</item>
     </style>
 
     <!-- Style for a tab that displays a category name -->
