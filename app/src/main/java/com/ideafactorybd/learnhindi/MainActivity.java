@@ -17,7 +17,6 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView;
-    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         // Obtain the FirebaseAnalytics instance.
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        FirebaseAnalytics mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
     }
 
     @Override
