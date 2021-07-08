@@ -5,44 +5,39 @@ def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-    signingConfigs {
-        release {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
-        }
+  signingConfigs {
+    release {
+      keyAlias keystoreProperties['keyAlias']
+      keyPassword keystoreProperties['keyPassword']
+      storeFile file(keystoreProperties['storeFile'])
+      storePassword keystoreProperties['storePassword']
     }
-    compileSdkVersion 28
-    defaultConfig {
-        applicationId "com.ideafactorybd.learnhindi"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 6
-        versionName "3.1"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.release
+  }
+  compileSdkVersion 30
+  defaultConfig {
+    applicationId "com.ideafactorybd.learnhindi"
+    minSdkVersion 21
+    targetSdkVersion 30
+    versionCode 6
+    versionName "3.1"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    signingConfig signingConfigs.release
+  }
+  buildTypes {
+    release {
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+  }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'com.google.firebase:firebase-ads:18.1.1'
-    implementation 'com.google.firebase:firebase-core:17.0.1'
-    testImplementation 'junit:junit:4.12'
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+  implementation 'androidx.appcompat:appcompat:1.3.0'
+  implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+  implementation 'com.google.android.material:material:1.4.0'
+  testImplementation 'junit:junit:4.13.1'
 }
-
-
-apply plugin: 'com.google.gms.google-services'
