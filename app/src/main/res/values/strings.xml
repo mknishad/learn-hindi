@@ -16,7 +16,4 @@
 
   <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
   <string name="category_family">পরিবার</string>
-
-  <!--Add unit id-->
-  <string name="bottom_ad_unit">ca-app-pub-3318512953586134/4803956205</string>
 </resources>
