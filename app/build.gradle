@@ -13,11 +13,11 @@ android {
       storePassword keystoreProperties['storePassword']
     }
   }
-  compileSdkVersion 32
+  compileSdk 33
   defaultConfig {
     applicationId "com.ideafactorybd.learnhindi"
-    minSdkVersion 21
-    targetSdkVersion 32
+    minSdk 21
+    targetSdk 33
     versionCode 8
     versionName "2.0.8"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -29,12 +29,13 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+  namespace 'com.ideafactorybd.learnhindi'
 }
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  implementation 'androidx.appcompat:appcompat:1.4.2'
+  implementation 'androidx.appcompat:appcompat:1.6.1'
   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-  implementation 'com.google.android.material:material:1.6.1'
-  implementation 'com.google.android.gms:play-services-ads:21.0.0'
+  implementation 'com.google.android.material:material:1.9.0'
+  implementation 'com.google.android.gms:play-services-ads:22.3.0'
 }
